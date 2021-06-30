@@ -5,12 +5,25 @@ namespace Zero_Project.ViewModels
 {
     internal class MainWindowViewModel : ViewModel
     {
-        private string _title = "Hello, World!";
-
-        public string Title
+        public MainWindowViewModel()
         {
-            get => _title;
-            set => Set(ref _title, value);
+            #region Команды - инициализация
+
+
+
+            #endregion
         }
+
+        #region Свойства - описание
+
+
+
+        #endregion
+
+        #region Команды - описание
+
+
+
+        #endregion
     }
 }
