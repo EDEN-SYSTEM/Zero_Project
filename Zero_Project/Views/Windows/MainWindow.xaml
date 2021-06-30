@@ -21,14 +21,6 @@
     </Window.DataContext>
 
     <Grid>
-        <Rectangle Fill="Blue"
-                   Width="100"
-                   Height="100">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="MouseLeftButtonDown">
-                    <i:InvokeCommandAction Command="{Binding CloseAplicationCommand}"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </Rectangle>
+        
     </Grid>
 </Window>
