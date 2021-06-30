@@ -14,8 +14,18 @@ namespace Zero_Project.Infrastructure.Commands
             _CanExecute = CanExecute;
         }
 
+        /// <summary>
+        /// Задачей данного метода является определение доступности привязанной к нему комманды на ее выполнение.
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public override bool CanExecute(object parameter) => _CanExecute?.Invoke(parameter) ?? true;
 
+        /// <summary>
+        /// Задачей данного метода является выполнение тела команды, 
+        /// которая привязана к данному методу.
+        /// </summary>
+        /// <param name="parameter"></param>
         public override void Execute(object parameter) => _Execute(parameter);
     }
 }

@@ -21,7 +21,7 @@ namespace Zero_Project.Infrastructure.Commands.Base
 
         /// <summary>
         /// Задачей данного метода является выполнение тела команды, 
-        /// которая привязана к данному методу
+        /// которая привязана к данному методу.
         /// </summary>
         /// <param name="parameter"></param>
         public abstract void Execute(object parameter);
