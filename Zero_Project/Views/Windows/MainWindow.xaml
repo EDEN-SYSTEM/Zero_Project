@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:cmd="clr-namespace:Zero_Project.Infrastructure.Commands"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:vm="clr-namespace:Zero_Project.ViewModels"
         xmlns:local="clr-namespace:Zero_Project"
         mc:Ignorable="d"
@@ -20,10 +21,14 @@
     </Window.DataContext>
 
     <Grid>
-        <Button Height="30" Width="100" Content="Выход">
-            <Button.Command>
-                <cmd:CloseApplicationCommand/>
-            </Button.Command>
-        </Button>
+        <Rectangle Fill="Blue"
+                   Width="100"
+                   Height="100">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseLeftButtonDown">
+                    <i:InvokeCommandAction Command="{Binding CloseAplicationCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Rectangle>
     </Grid>
 </Window>

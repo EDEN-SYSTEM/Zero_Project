@@ -1,6 +1,7 @@
 ﻿using Zero_Project.Infrastructure.Commands;
 using Zero_Project.ViewModels.Base;
 using System;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Zero_Project.ViewModels
@@ -11,7 +12,7 @@ namespace Zero_Project.ViewModels
         {
             #region Команды - инициализация
 
-
+            CloseAplicationCommand = new LambdaCommand(OnCloseAplicationCommandExecuted, CanCloseAplicationCommandExecute);
 
             #endregion
         }
@@ -24,7 +25,14 @@ namespace Zero_Project.ViewModels
 
         #region Команды - описание
 
+        public ICommand CloseAplicationCommand { get; }
 
+        private bool CanCloseAplicationCommandExecute(object p) => true;
+
+        private void OnCloseAplicationCommandExecuted(object p)
+        {
+            Application.Current.Shutdown();
+        }
 
         #endregion
     }
