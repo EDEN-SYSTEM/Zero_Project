@@ -7,14 +7,17 @@
         xmlns:local="clr-namespace:Zero_Project"
         mc:Ignorable="d"
         
-        Title="{Binding Title}" 
+        Title="{Binding Title}"
+        WindowState="Maximized"
+        WindowStyle="None"
+        Background="Black"
         Height="450" 
         Width="800">
     
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
-    
+
     <Grid>
         
     </Grid>
